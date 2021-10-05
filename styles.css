@@ -1,0 +1,61 @@
+.window{
+    width: 800px;
+    height: 300px;
+    border-color: black;
+    border-style: solid;
+    margin: auto;
+    position: relative;
+}
+
+.round {
+    font-size: 75px;
+    text-align: center;
+}
+
+.score {
+    position: absolute;
+    left: 750px;
+}
+
+.dinosaur{
+    width: 20px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    top: 250px;
+    left: 30px;
+}
+
+.jump{
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0%{top: 250px;}
+    30%{top: 200px;}
+    70%{top: 200px;}
+    100%{top: 250px;}
+}
+
+.cactus {
+    --test: 1s;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    position: absolute;
+    top: 275px;
+    left: 775px;
+    animation: cactus var(--test) infinite linear;
+}
+
+@keyframes cactus{
+    0%{left: 775px;}
+    100%{left: -40px;}
+}
+
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}
